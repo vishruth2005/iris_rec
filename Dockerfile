@@ -12,6 +12,7 @@ RUN apk add --no-cache build-base nodejs tzdata yarn
 
 # Install bundler
 RUN gem install bundler:2.4.7
+RUN gem update --system 3.2.3
 
 # Copy the Gemfile and Gemfile.lock
 COPY Gemfile Gemfile.lock ./
@@ -26,4 +27,4 @@ COPY . .
 EXPOSE 3000
 
 # Start the Rails server
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["sh", "-c", "rails server -b 0.0.0.0"]

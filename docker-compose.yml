@@ -15,14 +15,17 @@ services:
       - mynetwork
 
   web:
-    build: .
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
-    volumes:
-      - .:/vedant
-    ports:
-      - "8080:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web-1
+    restart: always
     depends_on:
       - db
+    ports:
+      - "8080:3000"
+    environment:
+      DATABASE_URL: mysql2://vedant:Infinity@1@db:3306/rec_2024
     networks:
       - mynetwork
 
