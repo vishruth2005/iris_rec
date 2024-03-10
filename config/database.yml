@@ -10,7 +10,7 @@ default: &default
   pool: 200
   database: rec_2024
   username: vedant
-  password: Infinity@1
+  password: <%= ENV['DB_PASSWORD'] || 'Infinity%401' %>
   host: localhost
   port: 3306
   # socket: /var/run/mysqld/mysqld.sock
