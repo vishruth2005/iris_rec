@@ -1,0 +1,10 @@
+FROM python:3.9
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the backup script into the container
+COPY backup.py .
+
+# Run the backup script
+CMD ["python", "backup.py"]

@@ -68,6 +68,17 @@ services:
     networks:
       - mynetwork
 
+  backup:
+    build:
+      context: .
+      dockerfile: Dockerfile.backup
+    volumes:
+      - ./backup.py:/app/backup.py
+    depends_on:
+      - db
+    networks:
+      - mynetwork
+
 volumes:
   db_data:
   nginx_data:
