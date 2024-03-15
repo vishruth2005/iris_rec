@@ -25,6 +25,7 @@ I also had to change the image i used to ruby:2.6.10-alpine as the above couldnt
 7.The last major error i faced was finding the right code directory and data directory while wting backup.py for task8.This was completed by looking up various resources in internet like reddit,baeldung etc.
 
 The rest of the tasks were competed without any major hiccups as doing the first two were the main difficulty.After that it was just changing docker compose,dokerfile and adding a few files to match the requirements.
+The tasks are hyperlinked in the file called tasks.md.
 
 Overall it was a brainstorming, and learning experience as i leart a lot of new things not just related to docker in these two weeks as i attempted these tasks.
 
